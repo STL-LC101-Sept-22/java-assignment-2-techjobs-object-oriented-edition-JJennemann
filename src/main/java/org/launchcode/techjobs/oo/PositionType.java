@@ -1,5 +1,8 @@
 package org.launchcode.techjobs.oo;
 
+import javax.swing.text.Position;
+import java.util.Objects;
+
 public class PositionType {
 
     private int id;
@@ -17,6 +20,36 @@ public class PositionType {
     }
 
     // TODO: Add a custom toString() method that returns the data stored in 'value'.
+
+    @Override
+    public String toString() {
+        return value;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId());
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if(this == o) return true;
+        if(!(o instanceof PositionType)) return false;
+        PositionType positionType = (PositionType) o;
+        return getId() == positionType.getId();
+
+//        if(o == this){
+//            return true;
+//        }
+//        if (o == null){
+//            return false;
+//        }
+//        if(o.getClass() != getClass()){
+//            return false;
+//        }
+//        PositionType positionType = (PositionType) o;
+//        return positionType.getId() == getId();
+    }
 
     // TODO: Add custom equals and hashCode methods. Consider two PositionType objects "equal" when
     //  their id fields match.
