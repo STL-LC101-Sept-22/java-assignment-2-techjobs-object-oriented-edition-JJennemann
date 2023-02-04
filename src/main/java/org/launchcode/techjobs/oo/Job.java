@@ -34,6 +34,25 @@ public class  Job {
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
     //  match.
 
+
+    @Override
+    public String toString() {
+        if(name == "") name = "Data not available";
+//        if(name == "" &&
+//                employer.getValue() == "Data not available" &&
+//                location.getValue() == "Data not available" &&
+//                positionType.getValue() == "Data not available" &&
+//                coreCompetency.getValue() == "Data not available" ){
+//            return "OOPS! This job does not seem to exist";
+//        } else{
+            return "\n" + "ID: " + id + "\n" + "Name: " + name + "\n" + "Employer: " + employer + "\n" +
+                    "Location: " + location + "\n" + "Position Type: " + positionType + "\n" + "Core Competency: " +
+                    coreCompetency + "\n";
+//        }
+
+
+    }
+
     @Override
     public int hashCode() {
         return Objects.hash(getId());
@@ -46,9 +65,7 @@ public class  Job {
         Job job = (Job) o;
         return getId() == job.getId();
     }
-
-
-    // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
+// TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
 
 
@@ -65,11 +82,11 @@ public class  Job {
     }
 
     public Employer getEmployer() {
-        return employer;
+            return employer;
     }
 
     public void setEmployer(Employer employer) {
-        this.employer = employer;
+            this.employer = employer;
     }
 
     public Location getLocation() {

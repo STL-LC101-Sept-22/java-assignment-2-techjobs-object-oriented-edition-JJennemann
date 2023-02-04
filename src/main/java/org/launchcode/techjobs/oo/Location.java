@@ -25,6 +25,9 @@ public class Location {
 
     @Override
     public String toString() {
+        if(value == null || value == ""){
+            return "Data not available";
+        }
         return value;
     }
 
@@ -52,7 +55,8 @@ public class Location {
     }
 
     public void setValue(String value) {
-        this.value = value;
+            this.value = value;
+
     }
 
 }

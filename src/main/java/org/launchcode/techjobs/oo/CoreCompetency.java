@@ -9,7 +9,7 @@ public class CoreCompetency {
     private String value;
 
     public CoreCompetency() {
-        this.id = nextId;
+        id = nextId;
         nextId++;
     }
 
@@ -22,6 +22,9 @@ public class CoreCompetency {
 
     @Override
     public String toString() {
+        if(value == null || value == ""){
+            return "Data not available";
+        }
         return value;
     }
 
