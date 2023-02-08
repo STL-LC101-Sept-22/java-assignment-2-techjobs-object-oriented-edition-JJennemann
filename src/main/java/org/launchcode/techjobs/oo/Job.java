@@ -37,18 +37,21 @@ public class  Job {
 
     @Override
     public String toString() {
-        if(name == "") name = "Data not available";
-//        if(name == "" &&
-//                employer.getValue() == "Data not available" &&
-//                location.getValue() == "Data not available" &&
-//                positionType.getValue() == "Data not available" &&
-//                coreCompetency.getValue() == "Data not available" ){
+
+
+//        if(name == "Data not available" &&
+//                employer.equals("Data not available") &&
+//                location.equals("Data not available") &&
+//                positionType.equals("Data not available") &&
+//                coreCompetency.equals("Data not available") ){
 //            return "OOPS! This job does not seem to exist";
-//        } else{
+//        }else{
             return "\n" + "ID: " + id + "\n" + "Name: " + name + "\n" + "Employer: " + employer + "\n" +
                     "Location: " + location + "\n" + "Position Type: " + positionType + "\n" + "Core Competency: " +
                     coreCompetency + "\n";
 //        }
+
+
 
 
     }

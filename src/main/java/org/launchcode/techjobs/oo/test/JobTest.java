@@ -111,7 +111,7 @@ public class JobTest {
 
     @Test
     public void testToStringHandlesEmptyField(){
-        Job testJob1 = new Job("Product tester", new Employer(), new Location("Desert"),
+        Job testJob1 = new Job("Product tester", new Employer(""), new Location("Desert"),
                 new PositionType("Quality control"), new CoreCompetency("Persistence"));
         String spec = "If a field is empty the method should add, 'Data not available' after the label.";
         String expected = "\n" +
