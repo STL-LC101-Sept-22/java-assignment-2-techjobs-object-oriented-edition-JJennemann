@@ -97,7 +97,7 @@ public class JobTest {
         String spec = "returned toString String should contain a label for each field, followed by the data stored" +
                     " in that field with each field on its own line.";
         String expected = "\n" +
-                "ID: 4\n" +
+                "ID: 5\n" +
                 "Name: Product tester\n" +
                 "Employer: ACME\n" +
                 "Location: Desert\n" +
@@ -115,7 +115,7 @@ public class JobTest {
                 new PositionType("Quality control"), new CoreCompetency("Persistence"));
         String spec = "If a field is empty the method should add, 'Data not available' after the label.";
         String expected = "\n" +
-                "ID: 3\n" +
+                "ID: 4\n" +
                 "Name: Product tester\n" +
                 "Employer: Data not available\n" +
                 "Location: Desert\n" +
@@ -127,13 +127,13 @@ public class JobTest {
         assertEquals(expected, actual);
     }
 
-//    @Test
-//    public void testToStringHandlesAllEmptyFields(){
-//        Job testJob = new Job("", new Employer(), new Location(),
-//                new PositionType(), new CoreCompetency());
-//        String expected = "OOPS! This job does not seem to exist";
-//        String actual = testJob.toString();
+    @Test
+    public void testToStringHandlesAllEmptyFields(){
+        Job testJob = new Job("", new Employer(""), new Location(""),
+                new PositionType(""), new CoreCompetency(""));
+        String expected = "OOPS! This job does not seem to exist";
+        String actual = testJob.toString();
 //        System.out.println(testJob.toString());
-//        assertEquals(expected, actual);
-//    }
+        assertEquals(expected, actual);
+    }
 }
